@@ -17,7 +17,8 @@ public class HomeController {
 		
 		int soA=10;
 		int soB=20;
-		
+		int soC=7;
+		int soD=10;
 		int tong=tinhTong(soA, soB);
 		
 		andView.addObject("tong", tong);
