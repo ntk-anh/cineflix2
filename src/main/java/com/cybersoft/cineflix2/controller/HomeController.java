@@ -15,8 +15,8 @@ public class HomeController {
 		//vì đang trả ra modelandview nên sẽ gọi modelandview
 		ModelAndView andView= new ModelAndView("home");//tên file giao diện
 		
-		int soA=10;
-		int soB=20;
+		int soA=15;
+		int soB=10;
 		
 		int tong=tinhTong(soA, soB);
 		
