@@ -1,0 +1,33 @@
+package com.cybersoft.cineflix2.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+@RequestMapping("/home")
+public class HomeController {
+
+	@GetMapping("")
+	public ModelAndView home() {
+		//modelandview:1-trả ra giao diện cho đường dẫn, 2-trả giá trị cho giao diện xài
+		//vì đang trả ra modelandview nên sẽ gọi modelandview
+		ModelAndView andView= new ModelAndView("home");//tên file giao diện
+		
+		int soA=10;
+		int soB=20;
+		
+		int tong=tinhTong(soA, soB);
+		
+		andView.addObject("tong", tong);
+		return andView; 
+	}
+	
+	
+	private int tinhTong(int soA, int soB) {
+		int tong=0;
+		tong=soA+soB;
+		return tong;
+	}
+}
