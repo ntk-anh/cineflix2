@@ -15,10 +15,12 @@ public class HomeController {
 		//vì đang trả ra modelandview nên sẽ gọi modelandview
 		ModelAndView andView= new ModelAndView("home");//tên file giao diện
 		
+
 		int soA=10;
 		int soB=20;
 		int soC=7;
 		int soD=10;
+
 		int tong=tinhTong(soA, soB);
 		
 		andView.addObject("tong", tong);
